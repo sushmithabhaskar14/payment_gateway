@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :products
+  resources :pages
+  resources :categories
   resources :attachments
   resources :projects
   resources :portfolios
@@ -17,5 +20,5 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  root "users#show_portfolio"
+  root "pages#home"
 end
